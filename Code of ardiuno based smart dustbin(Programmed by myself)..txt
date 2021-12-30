@@ -1,0 +1,41 @@
+//Viral Tech
+//Ardiuno based Smart dustbin
+
+#include <Servo.h>   //servo library
+Servo myservo;       //create Servo obeject
+int trigPin = 7;     //define trig pin
+int echoPin = 8;     //define echo pin
+int servoPin = 9;    //define servopin
+int dist;            //create variable dist
+int duration;        //create varibale duration
+
+
+void setup() {       
+    Serial.begin(9600);         //Setup Serial communication
+    myservo.attach(servoPin);  
+    pinMode(trigPin, OUTPUT);   //define trig pinmode
+    pinMode(echoPin, INPUT);    //define echo pinmode
+    myservo.write(0);           //initial position of servo
+} 
+
+void loop() {  
+ digitalWrite(10,HIGH);
+ digitalWrite(trigPin, LOW);
+ delayMicroseconds(5);
+ digitalWrite(trigPin, HIGH);          //Formula to calculate distnace
+ delayMicroseconds(15);
+ digitalWrite(trigPin, LOW);
+ pinMode(echoPin, INPUT);
+ duration = pulseIn(echoPin, HIGH);
+ dist = (duration/2) / 29.1;           //obtain distance
+ Serial.print(dist);                   //Print distnace in serial monitor
+ 
+   if ( dist<50 ) {       //Conditioning
+     myservo.write(0);    //Closed cap
+     delay(3000);       
+     myservo.write(150);  //Opened Cap 
+     delay(1000); 
+   }
+}
+
+
