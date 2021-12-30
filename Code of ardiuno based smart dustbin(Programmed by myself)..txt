@@ -1,4 +1,3 @@
-//Viral Tech
 //Ardiuno based Smart dustbin
 
 #include <Servo.h>   //servo library
