@@ -35,6 +35,6 @@ void loop() {
      myservo.write(150);  //Opened Cap 
      delay(1000); 
    }
-}
+}////////////
 
 
