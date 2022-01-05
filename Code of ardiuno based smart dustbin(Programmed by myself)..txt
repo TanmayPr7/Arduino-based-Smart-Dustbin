@@ -14,7 +14,7 @@ void setup() {
     myservo.attach(servoPin);  
     pinMode(trigPin, OUTPUT);   //define trig pinmode
     pinMode(echoPin, INPUT);    //define echo pinmode
-    myservo.write(0);           //initial position of servo
+    myservo.write(0);           
 } 
 
 void loop() {  
