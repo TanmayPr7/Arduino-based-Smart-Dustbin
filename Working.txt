@@ -1,0 +1,12 @@
+# This is the Arduino based Sensor based robot which uses sensor, servo motor, microcontroller, etc. It's working is
+this robot basically sense garbage and opens dustbin cap, this robot senses garbage or any other object with the help
+Ultrasonic Sensor.
+
+# Ultrasonic sensor consist of two parts transmitter and reciver. Transmitter shot's out ultrasonic waves whic later hits
+object if present if front and comes back by reflecting, which is recived by reciver part.
+
+# By this continious In and Out process Ultrasonic sensor calculates distance between sensor and object if present, then sensor sends 
+signal to microcontroller(Arduino), which later tells Servo motor when to open or close the cap of dustbin.
+
+# This is basic working principle of Arduino based obstacle avoiding robot:)
+/////////////////////////////////////////////////////////////////////////////////////
